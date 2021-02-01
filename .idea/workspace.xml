@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dfd517a-3c7d-4aae-8851-4811f7d0eb79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CustomFilter/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customfilter/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CustomFilter/CustomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customfilter/CustomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CustomFilter/ICustomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customfilter/ICustomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CustomFilter/CustomFilterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/customfilter/CustomFilterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +109,7 @@
       <workItem from="1611848914042" duration="893000" />
       <workItem from="1612034959739" duration="504000" />
       <workItem from="1612183939390" duration="2456000" />
+      <workItem from="1612189471785" duration="355000" />
     </task>
     <servers />
   </component>
