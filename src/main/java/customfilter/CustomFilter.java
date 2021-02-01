@@ -1,4 +1,4 @@
-package CustomFilter;
+package customfilter;
 
 
 import java.util.*;
@@ -14,7 +14,7 @@ public class  CustomFilter<T> implements ICustomFilter<T>  {
     public CustomFilter<T> filter(Check<T> check) {
         List<T> copyList = new ArrayList<>();
         for (T t : updateList) {
-            if(check.Test(t))
+            if(check.test(t))
                 copyList.add(t);
         }
         updateList = copyList;
@@ -22,27 +22,31 @@ public class  CustomFilter<T> implements ICustomFilter<T>  {
     }
 
     @Override
-    public List<T> format(int pageSize, int numberPage) {
+    public List<T> paginate(int pageSize, int numberPage) {
         List<T> formatList = new ArrayList<>();
-        for (int i = pageSize * (numberPage); i < pageSize * numberPage + pageSize; i++) {
+        int startPosition = pageSize * numberPage;
+        int endPosition = pageSize * numberPage + pageSize;
+        for (int i = startPosition; i < endPosition; i++) {
             formatList.add(updateList.get(i));
         }
         return formatList;
     }
 
     @Override
-    public List<T> format(int pageSize, int numberFirstPage, int numberLastPage) {
+    public List<T> paginate(int pageSize, int numberFirstPage, int numberLastPage) {
         List<T> formatList = new ArrayList<>();
-        for (int i = pageSize * (numberFirstPage); i < pageSize * numberFirstPage + pageSize *(numberLastPage - numberFirstPage); i++) {
+        int startPosition = pageSize * numberFirstPage;
+        int endPosition = pageSize * numberFirstPage + pageSize *(numberLastPage - numberFirstPage);
+        for (int i = startPosition; i < endPosition; i++) {
             formatList.add(updateList.get(i));
         }
         return formatList;
     }
 
     @Override
-    public CustomFilter<T> sort(Comparator<T> comparator) {
+    public List<T> sort(Comparator<T> comparator) {
         Collections.sort(updateList,comparator);
-        return this;
+        return updateList;
     }
 
     @Override

@@ -5,18 +5,18 @@ import java.util.Objects;
 public class Person {
     private int age;
     private String name;
-    private boolean gender;
-    private int dateOfBirth;
+    private String gender;
+
 
     public Person() {
     }
 
-    public Person(int age, String name, boolean gender, int dateOfBirth) {
+    public Person(int age, String name, Gender gender) {
         this.age = age;
         this.name = name;
-        this.gender = gender;
-        this.dateOfBirth = dateOfBirth;
+        this.gender = gender.getGender();
     }
+
 
     public int getAge() {
         return age;
@@ -34,32 +34,40 @@ public class Person {
         this.name = name;
     }
 
-    public boolean getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public int getDateOfBirth() {
-        return dateOfBirth;
+    public enum Gender{
+        woman("woman"),
+        man("man");
+
+        private final String gender;
+
+        Gender(String gender) {
+            this.gender = gender;
+        }
+
+        public String getGender() {
+            return gender;
+        }
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && dateOfBirth == person.dateOfBirth && Objects.equals(name, person.name) && Objects.equals(gender, person.gender);
+        return age == person.age && gender == person.gender && Objects.equals(name, person.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(age, name, gender, dateOfBirth);
+        return Objects.hash(age, name, gender);
     }
 }
